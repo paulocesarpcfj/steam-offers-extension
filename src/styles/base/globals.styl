@@ -1,0 +1,49 @@
+html
+    font-size 10px
+    font-family Helvetica, arial, freesans, clean, sans-serif
+
+body
+    font-size 1.3rem
+
+.main
+    width 350px
+    height 80rem
+    background-color #eee
+    border-right .1rem #333
+
+.content
+    // padding .5rem
+
+.news-list
+    background-color #fff
+
+    > .item
+        display flex
+        align-items center
+        padding 1rem
+        border-bottom .1rem solid #ddd
+        cursor pointer
+        color #910000
+
+        &:hover
+            background-color darken(#fff, 3%)
+            > .image
+                border .3rem solid #910000
+
+        > .image
+            width 9.5rem
+            min-width 9.5rem
+            height 6.5rem
+            background-size cover
+            display block
+            border-radius .5rem
+            border .3rem solid #ffffff
+
+        > .content
+            padding 1rem
+
+            > .title
+                font-size 1.7rem
+                font-weight bold
+                letter-spacing -1px
+            // > .social-tools
