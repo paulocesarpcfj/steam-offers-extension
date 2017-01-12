@@ -6,7 +6,7 @@
     // "icons": {
     //     "128": "./images/128.png"
     // },
-    "manifest_version": 1,
+    "manifest_version": 2,
     "name": "Steam Offers",
     "description": "Veja todas as ofertas da Steam do momento de qualquer lugar!",
     "version": "1.0",
