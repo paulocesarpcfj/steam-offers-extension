@@ -22,9 +22,14 @@ const Item = ({ title, image, link, discount, oldPrice, newPrice }) => (
 
         <div className="content">
             <div className="title">{title}</div>
-            <div className="title">{discount}</div>
-            <div className="title">{oldPrice}</div>
-            <div className="title">{newPrice}</div>
+
+            <div className="prices">
+                <div className="old">{oldPrice}</div>
+                <div className="new">{newPrice}</div>
+            </div>
+
+            <div className="discount">{discount}</div>
+
         </div>
     </a>
 );
