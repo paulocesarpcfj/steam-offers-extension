@@ -2,6 +2,7 @@ import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { fetchOffers } from 'actions/offers';
 import { OffersList } from 'components/OffersList';
+import { Loading } from 'components/Loading';
 
 class Offers extends React.Component {
     componentDidMount() {
@@ -10,7 +11,10 @@ class Offers extends React.Component {
 
     render() {
         return (
-            <OffersList offers={this.props.offers.items} />
+            <article>
+                <Loading loading={this.props.offers.isLoading} />
+                <OffersList offers={this.props.offers.items} />
+            </article>
         );
     }
 }
