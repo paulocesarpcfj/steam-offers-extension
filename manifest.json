@@ -9,7 +9,7 @@
     "manifest_version": 2,
     "name": "Steam Offers",
     "description": "Veja todas as ofertas da Steam do momento de qualquer lugar!",
-    "version": "1.0",
+    "version": "1.0.1",
     "permissions": [
         "http://www.google.com/",
         "notifications",
