@@ -1,20 +1,41 @@
 .offers-list
-    a
+    > .item
         display flex
         text-decoration none
+        color white
+        border-bottom 1px solid
+        border-color rgba(190, 190 ,190, 0.5)
+        transition all .2s ease-in-out
 
-        .title
-            font-size 1.6rem
-            font-weight bold
+        &:nth-child(odd)
+            background rgba(190, 190, 190, 0.4)
 
-        .prices
-            display inline-block
+        &:hover
+            background #333
 
-        .discount
-            width 10%
-            display inline-block
-            float right
-            color #a4d007
-            background #4c6b22
-            padding .3rem
-            font-size 1.4rem
+        > .image
+            min-width 14rem
+
+        > .content
+            width 100%
+            padding 1rem
+
+            > .title
+                font-size 1.6rem
+                font-weight bold
+                margin-bottom 1rem
+
+            > .prices
+                display inline-block
+                font-size 1.4rem
+
+                > .old
+                    color #999
+
+            > .discount
+                display inline-block
+                float right
+                color #a4d007
+                background #4c6b22
+                padding .4rem
+                font-size 1.4rem

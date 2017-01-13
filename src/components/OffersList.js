@@ -24,7 +24,7 @@ const Item = ({ title, image, link, discount, oldPrice, newPrice }) => (
             <div className="title">{title}</div>
 
             <div className="prices">
-                <div className="old">{oldPrice}</div>
+                <strike className="old">{oldPrice}</strike>
                 <div className="new">{newPrice}</div>
             </div>
 
