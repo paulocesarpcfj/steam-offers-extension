@@ -11,10 +11,10 @@ class Offers extends React.Component {
 
     render() {
         return (
-            <article>
+            <div>
                 <Loading loading={this.props.offers.isLoading} />
                 <OffersList offers={this.props.offers.items} />
-            </article>
+            </div>
         );
     }
 }
