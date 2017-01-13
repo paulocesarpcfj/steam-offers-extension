@@ -17,7 +17,7 @@ export const OffersList = ({ offers }) => (
 );
 
 const Item = ({ title, image, link, discount, oldPrice, newPrice }) => (
-    <a href={link} className="item">
+    <a href={link} className="item" target="_blank">
         <img className="image" src={image} alt={title} />
 
         <div className="content">
