@@ -2,7 +2,7 @@
 
 ## O que é?
 
-Uma extensão do Chrome que lista todas as ofertas da Steam em um só lugar.
+Uma extensão para o Firefox que lista todas as ofertas da Steam em um só lugar.
 
 ## Instalação
 
