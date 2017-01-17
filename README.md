@@ -37,6 +37,6 @@ make
 - [Nyc](https://github.com/istanbuljs/nyc) - Istanbul command line interface.
 - [Enzyme](http://airbnb.io/enzyme/) - JavaScript Testing utility for React.
 - [JSDOM](https://github.com/tmpvar/jsdom) - A JavaScript implementation of the WHATWG DOM and HTML standards.
-- [Stylus](http://stylus-lang.com/) - Preprocessor css
-- [PostCSS](http://postcss.org/) - A tool for transforming CSS with JavaScript
+- [Stylus](http://stylus-lang.com/) - Preprocessor css.
+- [PostCSS](http://postcss.org/) - A tool for transforming CSS with JavaScript.
 
