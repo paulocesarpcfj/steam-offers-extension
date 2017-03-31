@@ -13,17 +13,11 @@ const config = {
             },
         }),
         new webpack.optimize.OccurrenceOrderPlugin(),
-        new webpack.optimize.UglifyJsPlugin({
-            compressor: {
-                screw_ie8: true,
-                warnings: false,
-            },
-        }),
         new CopyWebpackPlugin([
             { from: './images', to: 'images' },
-            { from: './manifest.json', to: 'manifest.json' }
-        ])
+            { from: './manifest.json', to: 'manifest.json' },
+        ]),
     ],
-}
+};
 
 export default config;
