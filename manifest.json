@@ -1,7 +1,7 @@
 {
     "name": "Steam Offers",
     "description": "Veja todas as ofertas da Steam do momento de qualquer lugar!",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "manifest_version": 2,
     "icons": {
         "128": "./images/128.png"
@@ -9,5 +9,8 @@
     "browser_action":{
       "default_icon": "./images/128.png",
       "default_popup": "index.html"
-    }
+    },
+    "permissions": [
+        "https://node-crawler-steam-offers.herokuapp.com/api/offers.json"
+    ]
 }
