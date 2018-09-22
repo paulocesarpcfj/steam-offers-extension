@@ -1,26 +1,24 @@
 import webpack from 'webpack';
 import baseConfig from './base';
-import Dashboard from 'webpack-dashboard';
-import DashboardPlugin from 'webpack-dashboard/plugin';
-
-const dashboard = new Dashboard();
 
 const config = {
     ...baseConfig,
 
-    entry: [
-        'react-hot-loader/patch',
-        'webpack-dev-server/client?http://localhost:8000/#/',
-        ...baseConfig.entry
-    ],
+    mode: 'development',
 
-    debug: true,
-    devtool: '#inline-source-map',
+    devtool: 'eval',
 
     plugins: [
         ...baseConfig.plugins,
+        new webpack.DefinePlugin({
+            'process.env': {
+                NODE_ENV: JSON.stringify('development'),
+            },
+        }),
         new webpack.HotModuleReplacementPlugin(),
-        new DashboardPlugin(dashboard.setData),
+        new webpack.LoaderOptionsPlugin({
+            debug: true,
+        }),
     ],
 
     devServer: {
@@ -30,7 +28,7 @@ const config = {
         inline: true,
         progress: true,
         historyApiFallback: true,
-    }
-}
+    },
+};
 
 export default config;

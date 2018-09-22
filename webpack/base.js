@@ -1,4 +1,3 @@
-import webpack from 'webpack';
 import path from 'path';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
@@ -13,7 +12,6 @@ const config = {
     output: {
         path: path.join(__dirname, '../', 'dist'),
         filename: 'js/[name].js',
-        publicPath: '/',
     },
 
     resolve: {
@@ -25,48 +23,36 @@ const config = {
             services: `${rootPath}/services`,
             views: `${rootPath}/views`,
         },
-        extensions: ['', '.js', '.jsx', '.styl', '.css']
+        extensions: ['.js', '.jsx', '.scss', '.css']
     },
 
     module: {
-        loaders: [
+        rules: [
             {
-                test: /\.styl$/,
-                loader: ExtractTextPlugin.extract(
-                    'style-loader',
-                    ['css-loader', 'postcss-loader', 'stylus-loader']
-                ),
+                test: /\.scss$/,
+                loader: ExtractTextPlugin.extract({
+                    fallback: 'style-loader',
+                    use: [{
+                        loader: 'css-loader',
+                    },
+                    {
+                        loader: 'sass-loader',
+                    }],
+                }),
             },
 
             {
-                test: /\.(eot|woff|ttf)$/,
-                loader: 'file-loader?name=/css/fonts/[name].[ext]',
-            },
-
-            {
-                test: /\.(jpg|svg)$/,
-                loader: 'file-loader?name=/images/[name].[ext]',
+                test: /\.css$/,
+                loader: ExtractTextPlugin.extract('style-loader', 'css-loader'),
             },
 
             {
                 test: /\.jsx?$/,
                 loader: 'babel-loader',
                 exclude: [/node_modules/, /src\/styles\/vendor/],
-                query: {
-                    presets: ['es2015', 'react', 'stage-0'],
-                },
             },
         ],
     },
-
-    postcss: () => {
-        return [
-            require('autoprefixer'),
-            require('postcss-discard-duplicates'),
-            require('postcss-discard-unused')(),
-        ];
-    },
-
 
     plugins: [
         new HtmlWebpackPlugin({
