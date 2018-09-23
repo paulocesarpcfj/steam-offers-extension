@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 
 export const Main = (props) => (
-    <div className="main" id="main">
+    <div className="main">
         <section className="content">
             {props.children}
         </section>

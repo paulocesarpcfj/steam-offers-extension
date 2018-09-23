@@ -1,5 +1,5 @@
 import webpack from 'webpack';
-import CopyWebpackPlugin from 'copy-webpack-plugin';
+// import CopyWebpackPlugin from 'copy-webpack-plugin';
 import baseConfig from './base';
 
 const config = {
@@ -13,10 +13,10 @@ const config = {
             },
         }),
         new webpack.optimize.OccurrenceOrderPlugin(),
-        new CopyWebpackPlugin([
-            { from: './images', to: 'images' },
-            { from: './manifest.json', to: 'manifest.json' },
-        ]),
+        // new CopyWebpackPlugin([
+        //     { from: './images', to: 'images' },
+        //     { from: './manifest.json', to: 'manifest.json' },
+        // ]),
     ],
 };
 

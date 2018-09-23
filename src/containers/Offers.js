@@ -11,36 +11,24 @@ class Offers extends React.Component {
         this.state = { currentPage: 1 };
 
         this.trackScrolling = this.trackScrolling.bind(this);
-        this.isBottom = this.isBottom.bind(this);
     }
     componentDidMount() {
         this.props.fetchOffers(this.state.currentPage);
-
-        document.addEventListener('scroll', this.trackScrolling);
     }
 
-    componentWillUnmount() {
-      document.removeEventListener('scroll', this.trackScrolling);
-    }
+    trackScrolling(e) {
+        const isBottom = e.target.scrollHeight - e.target.scrollTop === e.target.clientHeight;
 
-    isBottom(el) {
-        return el.getBoundingClientRect().bottom <= window.innerHeight;
-    }
-
-    trackScrolling() {
-        const wrappedElement = document.getElementById('main');
-
-        if (this.isBottom(wrappedElement)) {
+        if (isBottom) {
             this.setState({ currentPage: this.state.currentPage + 1 }, () => {
                 this.props.fetchOffers(this.state.currentPage);
-                console.log('header bottom reached');
             });
         }
-    };
+    }
 
     render() {
         return (
-            <div>
+            <div className="infiniteScroll" onScroll={this.trackScrolling}>
                 <Loading loading={this.props.offers.isLoading} />
                 <OffersList offers={this.props.offers.items} />
             </div>
