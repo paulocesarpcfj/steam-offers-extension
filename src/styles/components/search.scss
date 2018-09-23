@@ -1,0 +1,12 @@
+.search {
+    position: absolute;
+    width: 40rem;
+
+    > input {
+        width: 97%;
+        height: 25px;
+        margin: 0;
+        border: 0;
+        padding: 0 5px;
+    }
+}

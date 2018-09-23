@@ -1,4 +1,4 @@
-import { FETCH } from 'actions/offers';
+import { FETCH, SEARCH } from 'actions/offers';
 
 const INITIAL_STATE = {
     items: [],
@@ -18,6 +18,16 @@ export default (state = INITIAL_STATE, action) => {
                 ],
                 isLoading: false,
             };
+
+        case `${SEARCH}_PENDING`:
+            return { ...state, isLoading: true };
+        case `${SEARCH}_FULFILLED`:
+            return {
+                ...state,
+                items: action.payload.results,
+                isLoading: false,
+            };
+
         default:
             return state;
     }
