@@ -2,25 +2,25 @@
 
 ## O que é?
 
-Uma extensão para o Firefox que lista todas as ofertas da Steam em um só lugar.
+An extesion to list all Steam Offers
 
 ## Instalação
 
-Abra o terminal, entre no root do projeto e rode o seguinte comando
+Unix -> run this command
 
 ```
 make
 ```
 
-## Comandos
+## Commands
 
-* **npm start**: levanta um servidor de desenvolvimento em [http://localhost:8000](http://localhost:8000)
-* **npm test**: roda os testes
-* **npm run test:tdd**: roda os testes e fica escutando por alterações
-* **npm run lint**: verifica o code style e patterns de react e es6
-* **npm run lint:fix**: verifica o code style e patterns de react e es6 e corrige coisas simples
-* **npm run ci**: roda os tests e o lint
-* **npm build**: gera a pasta `dist`, que vai para produção
+* **npm start**: Dev server at [http://localhost:8000](http://localhost:8000)
+* **npm test**: Tests
+* **npm run test:tdd**: Run tests and watch for diffs
+* **npm run lint**: Verify JS patterns
+* **npm run lint:fix**: Verify JS patterns and fix small errors
+* **npm run ci**: Runs lint and tests
+* **npm build**: Generates `dist`, to production
 
 ## Stack
 

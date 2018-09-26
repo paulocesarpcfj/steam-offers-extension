@@ -1,6 +1,6 @@
 {
   "name": "steam-offers-chrome-extension",
-  "version": "1.2.1",
+  "version": "1.3.1",
   "description": "A Chrome Extension to list all the offers of Steam Page",
   "scripts": {
     "start": "npm run dev",
