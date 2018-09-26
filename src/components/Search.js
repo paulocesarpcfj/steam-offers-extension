@@ -7,6 +7,7 @@ export const Search = props => (
             minLength={3}
             debounceTimeout={300}
             onChange={e => props.handleSearch(e.target.value)}
+            placeholder="Digite para buscar"
         />
     </article>
 );
